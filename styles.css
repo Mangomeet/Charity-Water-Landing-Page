@@ -6,18 +6,20 @@
 }
 
 body {
-  font-family: Arial, sans-serif;
-  background-color: #cde2e8;
+  font-family: 'Proxima Nova', Arial, sans-serif;
+  background-color: #77a8bb;
   color: #333;
-  padding: 20px;
+  margin: 0;
+  padding: 16px; /* Small padding around the edges */
+  min-height: 100vh; /* Make sure body fills the viewport */
 }
 
 .container {
-  max-width: 1000px;
-  margin: auto;
-  background: #7db9ca;
-  padding: 40px 30px;
-  border-radius: 10px;
+  width: 100%;
+  margin: 0;
+  background: none; /* Remove background color */
+  padding: 0;
+  border-radius: 0;
   color: #fff;
   position: relative;
 }
@@ -31,27 +33,29 @@ body {
 }
 
 .header-logo {
-  height: 50px;
+  height: 70px;
+  padding-left: 20px;
 }
 
 .impact-btn {
-  background-color: #ffd5c2;
-  color: #333;
+  background-color: #fed8c1; /* Updated button color */
+  color: #77a8bb; /* Updated text color */
   padding: 10px 20px;
   border-radius: 20px;
   text-decoration: none;
   font-weight: bold;
+  font-size: 1.3em;
 }
 
 /* Main text section */
 .main-content h2 {
-  font-size: 2em;
+  font-size: 5.5em;
   margin-bottom: 15px;
-  color: #fff;
+  color: #fed8c1;
 }
 
 .highlight {
-  color: #ffd5c2;
+  color: #fed8c1; /* Same as button background */
 }
 
 .emphasis {
@@ -60,7 +64,13 @@ body {
 
 .main-content p {
   margin-bottom: 25px;
-  font-size: 1.1em;
+  font-size: 1.5em;
+  color: #fff7e1; /* Light yellow for the whole description */
+}
+
+/* Make special words yellow */
+.yellow-text {
+  color: #ffc907; /* Bright yellow for highlights */
 }
 
 /* CTA buttons */
@@ -71,12 +81,13 @@ body {
 }
 
 .cta {
-  background-color: #ffd5c2;
-  color: #333;
+  background-color: #fed8c1; /* Updated button color */
+  color: #77a8bb; /* Updated text color */
   padding: 12px 20px;
-  border-radius: 25px;
+  border-radius: 40px;
   text-decoration: none;
   font-weight: bold;
+  font-size: 1.3em;
 }
 
 /* Subscribe form */
@@ -91,15 +102,27 @@ body {
   padding: 10px;
   border: none;
   border-radius: 6px;
+  background-color: #fff7e1; /* Updated background */
+  color: #333;
 }
 
 .subscribe button {
-  background-color: #ffd5c2;
+  background-color: #fed8c1; /* Updated button color */
+  color: #77a8bb; /* Updated text color */
   border: none;
   padding: 10px 20px;
   border-radius: 6px;
   cursor: pointer;
   font-weight: bold;
+}
+
+/* Hover effect for all buttons */
+.impact-btn:hover,
+.cta:hover,
+.subscribe-wrapper button:hover {
+  background-color: #fcb09c; /* Darker pink on hover */
+  color: #77a8bb;
+  transition: background-color 0.2s;
 }
 
 /* Image gallery */
@@ -122,4 +145,243 @@ body {
   right: 20px;
   width: 40px;
   height: auto;
+}
+
+/* Highlighted section for the $10 impact */
+.highlight-section {
+  background-color: #fed8c1; /* Light yellow background */
+  padding: 20px;
+  border-radius: 10px;
+  margin-bottom: 30px;
+}
+
+.highlight-section h2 {
+  color: #333;
+  font-size: 1.8em;
+  margin-bottom: 10px;
+}
+
+.highlight-section p {
+  color: #666;
+  font-size: 1.1em;
+  line-height: 1.4;
+}
+
+/* Hands catching water image */
+.hands-catching-water {
+  display: block;
+  margin: 0 auto 20px;
+  max-width: 100%;
+  height: auto;
+}
+
+/* Images collage */
+.images-collage {
+  position: relative;
+  width: 480px;   /* Increased width */
+  height: 480px;  /* Increased height */
+  min-width: 400px;
+  min-height: 400px;
+  left: -40px;           /* Move collage 40px to the left */
+  top: 60px;     /* Lower the collage by 60px */
+}
+
+.img-desert {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 250px;   /* Increased width */
+  height: 250px;  /* Increased height */
+  object-fit: cover;
+  border-radius: 32px;
+  z-index: 1;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.10);
+}
+
+.img-water {
+  position: absolute;
+  top: 0;
+  right: 20px;
+  width: 370px;   /* Increased width */
+  height: 230px;  /* Increased height */
+  object-fit: cover;
+  border-radius: 28px;
+  z-index: 2;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.12);
+}
+
+.img-bothwaters {
+  position: absolute;
+  bottom: 50px;
+  left: 0;
+  width: 250px;   /* Increased width */
+  height: 250px;  /* Increased height */
+  object-fit: cover;
+  border-radius: 32px;
+  z-index: 3;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.14);
+}
+
+.main-flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;    /* Center vertically */
+  gap: 40px;
+  min-height: 500px;
+}
+
+.left-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;      /* Center all content horizontally */
+  justify-content: center;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.main-heading {
+  font-size: 80px;          /* Large heading */
+  color: #fed8c1;
+  text-align: center;
+  margin-bottom: 18px;
+  margin-top: 30px;
+  font-weight: bold;
+}
+
+.description {
+  font-size: 10px;          /* Subheading size */
+  color: #fff7e1;
+  text-align: center;
+  margin-bottom: 32px;      /* Space below subheading */
+  max-width: 420px;
+  margin-top: 20px;
+}
+
+.cta-buttons {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 24px;      /* Space below buttons */
+  justify-content: center;  /* Center buttons */
+  width: 100%;
+  margin-top: 30px;
+}
+
+.subscribe {
+  display: flex;
+  gap: 10px;
+  justify-content: center;  /* Center input and button */
+  width: 100%;
+}
+
+/* Subscribe wrapper for the left content */
+.subscribe-wrapper {
+  position: relative;
+  width: 270px;
+  margin: 200px auto 24px auto; /* Increased top margin to move it lower */
+  display: flex;
+  align-items: center;
+}
+
+.subscribe-wrapper input[type="email"] {
+  width: 100%;
+  padding: 12px 90px 12px 14px; /* right padding for button space */
+  border: none;
+  border-radius: 8px;
+  background-color: #fff7e1;
+  color: #333;
+  font-size: 1em;
+  box-sizing: border-box;
+}
+
+.subscribe-wrapper button {
+  position: absolute;
+  right: 6px;
+  top: 50%;
+  transform: translateY(-50%);
+  padding: 8px 16px;
+  border: none;
+  border-radius: 6px;
+  background-color: #fed8c1;
+  color: #77a8bb;
+  font-weight: bold;
+  cursor: pointer;
+  font-size: 1em;
+  box-shadow: none;
+}
+
+@media (max-width: 1100px) {
+  .main-flex {
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+  }
+  .images-collage {
+    position: static;
+    margin: 40px auto 0 auto;
+    left: 0;
+    top: 0;
+    width: 320px;
+    height: 320px;
+    min-width: 0;
+    min-height: 0;
+  }
+  .img-desert,
+  .img-bothwaters {
+    width: 140px;
+    height: 140px;
+    border-radius: 18px;
+  }
+  .img-water {
+    width: 200px;
+    height: 110px;
+    border-radius: 14px;
+  }
+}
+
+@media (max-width: 700px) {
+  .main-heading {
+    font-size: 2.2em;
+  }
+  .description {
+    font-size: 1em;
+    max-width: 90vw;
+  }
+  .cta {
+    padding: 10px 12px;
+    font-size: 1em;
+  }
+  .subscribe-wrapper {
+    width: 95vw;
+    max-width: 320px;
+  }
+  .images-collage {
+    width: 220px;
+    height: 220px;
+    margin-top: 30px;
+  }
+  .img-desert,
+  .img-bothwaters {
+    width: 80px;
+    height: 80px;
+    border-radius: 10px;
+  }
+  .img-water {
+    width: 120px;
+    height: 60px;
+    border-radius: 8px;
+  }
+}
+
+@media (max-width: 500px) {
+  .main-heading {
+    font-size: 1.3em;
+  }
+  .container {
+    padding: 0;
+  }
+  .header-logo {
+    height: 40px;
+    padding-left: 5px;
+  }
 }
